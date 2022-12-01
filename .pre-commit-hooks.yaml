@@ -1,0 +1,7 @@
+- id: last-modified-hook
+  name: Last Modified Hook
+  description: Make a description here
+  entry: last-modified-hook
+  language: python
+  types: [python]
+  args: ["--seconds", "--line_limit", "--line_template"]
