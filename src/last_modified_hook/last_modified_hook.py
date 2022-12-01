@@ -45,7 +45,9 @@ class LastModifiedReplacer:
 
     def _generate_line(self) -> str:
         now = datetime.now(timezone.utc)
-        return self.line_template.safe_substitute(_iso_date_=now.isoformat())
+        new_line = self.line_template.safe_substitute(_iso_date_=now.isoformat())
+        print(new_line)
+        return new_line
 
 
 def cli(argv: Sequence[str] | None = None) -> int:
