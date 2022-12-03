@@ -115,8 +115,10 @@ def cli(argv: Sequence[str] | None = None) -> int:
         help="Template string for a -new- last_modified line.",
     )
     args = parser.parse_args(argv)
-    replacer = LastModifiedReplacer()
-    matcher = LastModifiedMatcher()
+    replacer = LastModifiedReplacer(
+        seconds=args.seconds, line_template=args.line_template
+    )
+    matcher = LastModifiedMatcher(line_limit=args.line_limit)
     retv = 0
     for filename in args.filenames:
         try:
