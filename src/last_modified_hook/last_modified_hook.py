@@ -95,13 +95,13 @@ def cli(argv: Sequence[str] | None = None) -> int:
         help="Max age of a valid last_modified date in seconds.",
     )
     parser.add_argument(
-        "--line_limit",
+        "--line-limit",
         type=int,
         default=-1,
         help="Max number of lines to search for last_modified. -1 for no limit.",
     )
     parser.add_argument(
-        "--line_template",
+        "--line-template",
         type=str,
         default="",
         help="Template string for a -new- last_modified line.",
