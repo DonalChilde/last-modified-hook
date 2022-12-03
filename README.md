@@ -26,6 +26,7 @@ repos:
         args: [--seconds, 60, --line-limit, -1]
 ```
 
+
 ## License
 
 `last-modified-hook` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
