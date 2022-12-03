@@ -16,6 +16,16 @@
 pip install last-modified-hook
 ```
 
+```yaml
+# add to pre-commit-config.yaml
+repos:
+  -  repo: https://github.com/DonalChilde/last-modified-hook
+     rev: v0.0.1
+     hooks:
+     -  id: last-modified
+        args: [--seconds, 60, --line-limit, -1]
+```
+
 ## License
 
 `last-modified-hook` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
