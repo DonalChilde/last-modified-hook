@@ -1,16 +1,31 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Python: Current File",
-            "type": "python",
-            "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal",
-            "justMyCode": true
-        }
-    ]
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Current File",
+      "type": "python",
+      "python": "${workspaceFolder}/.venv/bin/python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Python: cli app",
+      "type": "python",
+      "python": "${workspaceFolder}/.venv/bin/python",
+
+      "request": "launch",
+      "program": "${workspaceFolder}/src/last_modified_hook/last_modified_hook.py",
+      "args": ["./test.py"],
+      "env": {
+        "PYTHONPATH": "${PYTHONPATH}:${workspaceFolder}/src/last_modified_hook"
+      },
+      "console": "integratedTerminal",
+      "justMyCode": true
+    }
+  ]
 }
