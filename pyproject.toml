@@ -4,11 +4,11 @@ build-backend = "hatchling.build"
 
 [project]
 name = "last-modified-hook"
-description = ''
+description = 'A pre-commit hook That updates a last_modified comment field in python source code files.'
 readme = "README.md"
 requires-python = ">=3.7"
 license = "MIT"
-keywords = []
+keywords = ["python", "pre-commit", "hook"]
 authors = [{ name = "Chad Lowe", email = "pfmsoft.dev@gmail.com" }]
 classifiers = [
   "Development Status :: 4 - Beta",
@@ -89,9 +89,9 @@ target-version = ['py310']
 max-line-length = "88"
 
 [project.urls]
-Documentation = "https://github.com/unknown/last-modified-hook#readme"
-Issues = "https://github.com/unknown/last-modified-hook/issues"
-Source = "https://github.com/unknown/last-modified-hook"
+Documentation = "https://github.com/DonalChilde/last-modified-hook#readme"
+Issues = "https://github.com/DonalChilde/last-modified-hook/issues"
+Source = "https://github.com/DonalChilde/last-modified-hook"
 
 [tool.hatch.version]
 path = "src/last_modified_hook/__about__.py"
