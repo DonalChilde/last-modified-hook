@@ -4,6 +4,7 @@ from pathlib import Path
 from string import Template
 from typing import Sequence
 
+from last_modified_hook import __about__
 from last_modified_hook.find_and_replace import (
     FileLineProtocol,
     LineMatcherProtocol,
@@ -104,6 +105,13 @@ def cli(argv: Sequence[str] | None = None) -> int:
         "--line-template",
         type=str,
         default="",
+        help="Template string for a -new- last_modified line.",
+    )
+    parser.add_argument(
+        "--version",
+        "-v",
+        action="version",
+        version=f"%(prog)s {__about__.__version__}",
         help="Template string for a -new- last_modified line.",
     )
     args = parser.parse_args(argv)
