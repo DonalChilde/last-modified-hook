@@ -20,10 +20,10 @@ pip install last-modified-hook
 # add to pre-commit-config.yaml
 repos:
   -  repo: https://github.com/DonalChilde/last-modified-hook
-     rev: v0.0.1
+     rev: v0.0.4
      hooks:
      -  id: last-modified
-        args: [--seconds, 60, --line-limit, -1]
+        args: [--seconds, "60", --line-limit, "-1"]
 ```
 
 
