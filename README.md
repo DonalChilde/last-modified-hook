@@ -1,5 +1,6 @@
 # last_modified_hook
 
+<!-- badges-begin -->
 [![PyPI - Version](https://img.shields.io/pypi/v/last-modified-hook.svg)](https://pypi.org/project/last-modified-hook)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/last-modified-hook.svg)](https://pypi.org/project/last-modified-hook)
 
@@ -26,7 +27,8 @@ repos:
         args: [--seconds, "60", --line-limit, "-1"]
 ```
 
-
 ## License
 
 `last-modified-hook` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
+
+<!-- github-only -->
