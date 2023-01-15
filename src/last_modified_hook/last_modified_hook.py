@@ -1,10 +1,10 @@
 import argparse
 from datetime import datetime, timedelta, timezone
+from importlib.metadata import distribution
 from pathlib import Path
 from string import Template
 from typing import Sequence
 
-from last_modified_hook import __about__
 from last_modified_hook.find_and_replace import (
     FileLineProtocol,
     LineMatcherProtocol,
@@ -14,6 +14,9 @@ from last_modified_hook.find_and_replace import (
     ModifiedLine,
     find_and_replace,
 )
+
+distro = distribution("last_modified_hook")
+VERSION = distro.metadata["Version"]
 
 
 class LastModifiedMatcher(LineMatcherProtocol):
@@ -111,7 +114,7 @@ def cli(argv: Sequence[str] | None = None) -> int:
         "--version",
         "-v",
         action="version",
-        version=f"%(prog)s {__about__.__version__}",
+        version=f"%(prog)s v{VERSION}",
         help="Template string for a -new- last_modified line.",
     )
     args = parser.parse_args(argv)
