@@ -85,7 +85,7 @@ class LastModifiedReplacer(LineReplacerProtocol):
         return new_line
 
 
-def cli(argv: Sequence[str] | None = None) -> int:
+def arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "filenames",
@@ -117,6 +117,11 @@ def cli(argv: Sequence[str] | None = None) -> int:
         version=f"%(prog)s v{VERSION}",
         help="Template string for a -new- last_modified line.",
     )
+    return parser
+
+
+def cli(argv: Sequence[str] | None = None) -> int:
+    parser = arg_parser()
     args = parser.parse_args(argv)
     replacer = LastModifiedReplacer(
         seconds=args.seconds, line_template=args.line_template
